@@ -3,5 +3,14 @@ body {
 }
 
 header {
-  background-color: blue;
+  background-color: lightgreen;
+}
+
+footer {
+  background-color: lightgreen;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto 0;
 }/*# sourceMappingURL=style.css.map */

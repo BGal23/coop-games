@@ -1,8 +1,15 @@
-//$webColor: 
+$webColor: lightgreen;
 
 body {
     margin: 0;
 }
 header {
-    background-color: blue;
+    background-color: $webColor;
+}
+footer {
+    background-color: $webColor;
+}
+.container {
+    max-width: 90%;
+    margin: 0 auto 0;
 }

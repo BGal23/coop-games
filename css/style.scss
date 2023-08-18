@@ -1,13 +1,31 @@
 $webColor: lightgreen;
-
+$titleColor: purple;
 body {
     margin: 0;
 }
 header {
     background-color: $webColor;
+    height: 60px;
+    border-bottom: 2px solid $titleColor;
+}
+.header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    &__title {    
+        color: $titleColor;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+    }
 }
 footer {
     background-color: $webColor;
+    border-top: 2px solid $titleColor;
+    color: $titleColor;
+    display: flex;
+    align-items: center;
 }
 .container {
     max-width: 90%;

@@ -4,10 +4,29 @@ body {
 
 header {
   background-color: lightgreen;
+  height: 60px;
+  border-bottom: 2px solid purple;
+}
+
+.header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.header__title {
+  color: purple;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 footer {
   background-color: lightgreen;
+  border-top: 2px solid purple;
+  color: purple;
+  display: flex;
+  align-items: center;
 }
 
 .container {

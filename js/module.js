@@ -1,7 +1,8 @@
 "use strick";
 
 const buttonNewGame = document.getElementById("button-game");
-let gameList = [];
+const gamesViewList = document.querySelector(".games-list")
+let gamesList = [];
 
 const addNewGame = (newGame) => {
     const titleGame = document.getElementById("title").value;
@@ -26,9 +27,13 @@ const addNewGame = (newGame) => {
         genre: genreNewArray,
         rating: ratingGame
     }
-    gameList.push(newGame)
+    gamesList.push(newGame)
 
-    console.log(gameList)
+    gamesViewList.innerHTML = `<div>
+        <h3>${newGame.name}</h3>
+        <img src="${newGame.foto}"></img>
+        <p>${newGame.description}</p>
+    </div>`;
 }
 
 buttonNewGame.addEventListener("click", addNewGame)

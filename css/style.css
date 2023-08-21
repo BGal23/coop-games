@@ -32,4 +32,19 @@ footer {
 .container {
   max-width: 90%;
   margin: 0 auto 0;
+}
+
+.foto {
+  height: 300px;
+  width: 200px;
+}
+
+.games-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.warning-text {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
 const buttonNewGame = document.getElementById("button-game");
 const gamesViewList = document.querySelector(".games-list")
 let gamesList = [];
+let newGameHTMLList = [];
 
 const addNewGame = (newGame) => {
     const titleGame = document.getElementById("title").value;
@@ -20,6 +21,7 @@ const addNewGame = (newGame) => {
             genreNewArray.push(game.value)
         }
     }
+
     newGame = {
         name: titleGame,
         foto: fotoGame,
@@ -27,13 +29,28 @@ const addNewGame = (newGame) => {
         genre: genreNewArray,
         rating: ratingGame
     }
+
+    for (let game in newGame) {
+        if (newGame[game].length === 0) {
+            return buttonNewGame.nextElementSibling.innerHTML = "Musisz wypełnić wszystkie pola"
+        }
+        else {
+            buttonNewGame.nextElementSibling.innerHTML = ""
+        }
+    }
     gamesList.push(newGame)
 
-    gamesViewList.innerHTML = `<div>
+    let newGameHTML = `<div>
         <h3>${newGame.name}</h3>
-        <img src="${newGame.foto}"></img>
+        <img alt="game ${newGame.name}" class="foto" src="${newGame.foto}"></img>
         <p>${newGame.description}</p>
-    </div>`;
+        <p>Gatunek: ${newGame.genre}</p>
+        <p>Ocena: ${newGame.rating}</p>
+        </div>`;
+
+    newGameHTMLList.push(newGameHTML)
+
+    gamesViewList.innerHTML = newGameHTMLList.join("")
 }
 
 buttonNewGame.addEventListener("click", addNewGame)
